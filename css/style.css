@@ -1,0 +1,945 @@
+@charset "UTF-8";
+/* CSS Document */
+/*-------------------------------------------------------------------------------------
+PC用レイアウト（768px以上スクリーン）
+----------------------------------------------------------------------------------------*/
+/*--------------------------------------------------
+共通設定(PC)
+-----------------------------------------------------*/
+/*body全体の初期スタイル調整*/
+body {
+  font-size: 62.5%; /*emの計算をしやすくするための定番設定*/
+    font-family: "Kameron", "Noto Sans JP", sans-serif;;
+  font-style: normal;
+  line-height: 1.7;
+  color: #1a1a1a;
+}
+/*リンク文字の設定*/
+a {
+  text-decoration: none;
+}
+
+/*ブラウザのCSSをリセット*/
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/*セクションエリアの共通設定*/
+section {
+  clear: both;
+  overflow: auto;
+}
+/*--------------------------------------------------
+見出しタグ設定（PC）
+-----------------------------------------------------*/
+h2 {
+  padding: 0.7em 4em;
+    text-align: center;
+    color: #2b724c;
+    font-size: 1.8em;
+    letter-spacing: 0.1;
+      line-height: 1.1;
+}
+
+h3 {
+  position: relative;
+  padding: 1em;
+  text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+h3:before {
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 4px;
+  content: '';
+  border-radius: 3px;
+  background: #d52438;
+}
+
+h4 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 17px;
+	text-align: center;
+    margin: 0;
+    color: #42210b;
+}
+
+h4::before,
+h4::after {
+	content: '';
+	width: 3px;
+	height: 30px;
+	background-color: #42210b;
+}
+
+h4::before {
+	margin-right: 10px;
+	transform: rotate(-35deg)
+}
+h4::after {
+	margin-left: 10px;
+	transform: rotate(35deg)
+}
+h5 {
+  position: relative;
+  padding: 1em;
+  text-align: center;
+      font-size: 1.4em;
+    letter-spacing: 1px;
+    color: #2b724c;
+
+}
+
+h5:before {
+  position: absolute;
+  bottom: 5px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 4px;
+  content: '';
+  border-radius: 3px;
+  background: #2b724c;
+}
+
+h6 {
+    border-bottom: 3px dotted #2b724c;
+    font-size: 1.3em;
+    margin: 0.5em 0;
+    color: #42210b;
+    line-height: 1.3;
+}
+
+.tit_all {
+    width: 35%;
+    margin: 0 auto;
+    padding: 2em 0 1em;
+    
+}
+/*--------------------------------------------------
+全体レイアウト／背景設定（PC）
+-----------------------------------------------------*/
+/*全体エリア（全体背景を設定するにはここ）*/
+.main {
+  background-color: #ffffff;
+}
+/*記事(ボディ)エリア*/
+.article {
+  background-color: #fff;
+  font-size: 1.7em; /*=16px*/
+}
+/*記事(ボディ)エリアの行間*/
+.article p {
+  line-height: 1.6;
+}
+
+.article{
+	width: 100%;
+}
+
+/*カラム全体の幅を変更する*/
+.top_image_in,.section_inr {
+  width: 950px;
+  margin: 0 auto; 
+  
+}
+/*--------------------------------------------------
+上部固定ヘッダー設定
+-----------------------------------------------------*/
+/*上部固定ヘッダー全体*/
+.header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 5000;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  overflow: auto;
+}
+/*ヘッダー内部をカラム幅にする*/
+.header_inr {
+  max-width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/*ヘッダーのロゴ*/
+.header_logo {
+  width: 7%;
+  float: left;
+  margin: 1em 0em ;
+}
+
+
+/*ヘッダーの問い合わせボタン*/
+.header_line {
+  width: 30%;
+  float: right;
+  margin: 1em 0.5em;
+}
+/*ヘッダー内の画像が常に幅100%になるように*/
+.header_logo img, .header_line img {
+  width: 100%;
+}
+/*--------------------------------------------------
+ファーストビュー設定
+-----------------------------------------------------*/
+.top_image {
+  background-image: url("../images/top_image_back.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: auto;
+}
+.top_image_in img {
+  width: 100%;
+}
+
+.pc_img { display: block !important; }
+.sp_img { display: none !important; }
+
+
+
+/*--------------------------------------------------
+余白の設定
+-----------------------------------------------------*/
+.cyousei_pc {
+    padding: 2em 3em;
+}
+.yohaku01 {
+    padding: 2em;
+}
+
+/*--------------------------------------------------
+sectionの設定
+-----------------------------------------------------*/
+
+.section_01 {
+    background-image: url("../images/bg_section01.jpg");
+    padding: 2em 0em 4em;
+}
+
+.section_02 {
+      background-color: #e8f5eb;
+    padding: 2em 0em;
+}
+
+.section_03 {
+    background-image: url("../images/bg_section03.jpg");
+    padding: 0 0 3em;
+    
+}
+
+.section_04 {
+background: linear-gradient(45deg, #0b53a0 0%, #0b53a0 50%, #83a8d3 50%, #83a8d3 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;    
+  padding: 4em 0em 2em;
+    
+}
+
+.section_05 {
+    background-image: url("../images/bg_section05.jpg");
+    background-size: cover;
+    background-position: top center;
+    padding: 11em 0 2em;
+}
+
+.section_06 {
+    background-image: url("../images/bg_section06.jpg");
+    background-size: cover;
+    background-position: top center;
+    padding: 2em 0;
+}
+
+.section_07 {
+    background-image: url("../images/bg_section07.jpg");
+        background-attachment: fixed;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.section_08 {
+      background-color: #fffad8;
+    padding: 2em 0em;
+}
+.section_09 {
+      background-color: #fff;
+    padding: 2em 0em;
+   
+}
+.section_10 {
+    background-image: url("../images/bg_section10.jpg");
+    background-size: cover;
+    background-position: top center;
+    padding: 2em 0 6em;
+}
+
+/*--------------------------------------------------
+CTAエリア
+-----------------------------------------------------*/
+
+.area_cta {
+    background-image: url("../images/bg_cta.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  padding: 2em 0 ;
+}
+
+.cta_logo {
+    width: 12% ;
+    margin: 0 auto 1em;
+
+}
+
+.tit_cta {
+    width: 40% ;
+    margin: 0 auto 1em;
+
+}
+
+.btn_cta_line {
+    width: 70%;
+    margin: 1em auto 0.2em;
+}
+.btn_cta_form {
+    width: 65%;
+    margin: 1em auto;
+}
+
+/*--------------------------------------------------
+新しい勉強のカタチ
+-----------------------------------------------------*/
+
+.waku_new {
+    background-image: url("../images/waku_new.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 2em 0 ;
+}
+
+.waku_new p {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.tit_new {
+    width: 400px;
+    margin: 3em auto 3em;
+}
+
+.img_new {
+    width: 650px;
+    margin: 2em auto;
+}
+
+.txt_marutto {
+    width: 500px;
+    margin: 0.5em auto;
+}
+
+/*--------------------------------------------------
+動画
+-----------------------------------------------------*/
+
+.movie {
+    padding: 2em 6em;
+}
+
+.iframe-wrap {
+    position: relative;
+    width: 95%;
+    padding-top: 56.25%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 2px solid #000;
+    margin: 0em auto 1em;
+}
+
+.iframe-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+
+
+/*--------------------------------------------------
+生徒実績
+-----------------------------------------------------*/
+
+.container_jisseki {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1em 0 2em ;
+
+}
+
+.box_jisseki {
+    width: 47%;
+    background-color: #ffe700;
+    border-radius: 5px;
+    padding: 20px 10px;
+    margin: 10px;
+
+}
+
+.img_goukaku {
+    float: right;
+    padding: 10px 0px 5px 10px; 
+    width: 20%;
+}
+
+.goukaku_txt {
+        float: left;
+    width: 80%;
+        padding-top: 0.5em
+
+}
+.goukaku_txt p {
+    line-height: 1.1;
+    margin: 0;
+}
+
+.goukaku_com {
+    font-weight: bold;
+    text-align: center;
+    color: #42210b;
+    font-size: 0.9em;
+
+}
+.goukaku_scl {
+    font-size: 2.6em;
+    font-weight: bold;
+  color: #d52438;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.img_test {
+    float: left;
+    padding: 10px 10px 0 10px; 
+    width: 30%;
+}
+
+.test_txt {
+        float: right;
+    width: 70%;
+        padding-top: 1em
+
+}
+.test_txt p {
+    line-height: 1.1;
+    margin: 0;
+}
+
+.test_kekka {
+    font-size: 2.6em;
+    font-weight: bold;
+  color: #d52438;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2 !important;
+}
+
+.eng {
+    color: #f15a24;
+}
+.math {
+    color: #0b41a0;
+}
+
+.ss {
+    color: #754c24;
+}
+.sc {
+    color: #2b724c;
+}
+
+/*--------------------------------------------------
+悩み
+-----------------------------------------------------*/
+
+.img_nayami {
+    width: 200px;
+    margin: 0em auto 2.2em;
+}
+
+
+.tit_nayami {
+    width: 90%;
+    margin: -2.5em auto 1em;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+.ul-align-center{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em 0em  ;
+    background-color: #fff;
+    width: 600px;
+    margin: 0 auto;
+    border: 2px solid #3e3a39;
+   
+  }
+
+.box_nayami {
+    margin: 0 auto;
+    padding: 1em 0;
+
+}
+.box_nayami li {
+    font-weight: 700;
+    margin: 0 auto 10px;
+    max-width: 880px;
+    font-size: 1.2em;
+    position: relative;
+    padding-left: 2em;
+
+}
+
+.box_nayami li:before {
+    font-family: "Font Awesome 5 free";
+    font-weight: 700;
+    font-size: 0.9em;
+    content: "\f00c";
+    color: #cc0007;
+    padding-right: 0.5em;
+
+
+}
+
+
+
+/*--------------------------------------------------
+３つの特徴
+-----------------------------------------------------*/
+.tit_tokucyou {
+    width: 700px;
+    margin: 0 auto ;
+}
+.ctn_tokucyou {
+    padding: 2em 0;
+}
+
+.wrap {
+        position: relative;
+}
+.num_r {
+    width: 70px;
+    position: absolute;
+    top: -14%;
+    left: 90%;
+}
+
+.num_l {
+    width: 70px;
+    position: absolute;
+    top: -14%;
+    left: 4%;
+}
+.box_tokucyou {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2em 1em;
+    margin: 4em 0 1em;
+    box-shadow: 5px 5px 7px  #688187;
+}
+.img_tokucyou {
+    float: left;
+    width: 40%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.txt_tokucyou {
+    float: right;
+    width: 60%;
+    padding:  1em;
+    font-size: 1.1em;
+}
+.img_tokucyou02 {
+    float: right;
+    width: 40%;
+    margin: 0 auto;
+    padding: 3em 1em 1em;
+}
+
+.txt_tokucyou02 {
+    float: left;
+    width: 60%;
+    padding:  1em;
+    font-size: 1.1em;
+}
+
+.fadein {
+    opacity : 0;
+    transform: translateY(0px);
+    transition: all 2s;
+}
+
+/*--------------------------------------------------
+講師について
+-----------------------------------------------------*/
+
+.tit_about {
+    width: 50%;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+.img_about {
+    padding: 2em 10em;
+}
+/*--------------------------------------------------
+生徒の声
+-----------------------------------------------------*/
+.voice_ctn {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em 0em;
+}
+
+
+.voice_box {
+    width: 48%;
+    margin: 0.5em;
+}
+
+
+/*--------------------------------------------------
+月額料金
+-----------------------------------------------------*/
+
+/*--------------------------------------------------
+テーブル設定
+-----------------------------------------------------*/
+table {
+  width: 100%;
+  border-right: 2px solid #2b724c;
+   border-bottom: 2px solid #2b724c;
+
+  margin: 3em 0em 2em;
+　
+}
+th, td {
+  padding: 0.8em 0.5em;
+  border-right: 2px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+table th {
+  background-color: #e8f5eb;
+  font-weight: bold;
+  text-align: center;
+    line-height: 1.2;
+    color: #2b724c;
+    border-left: 2px solid #2b724c;
+}
+table td {
+  text-align: center;
+  background-color: #fff;
+    line-height: 1.4;
+}
+
+.tb_green {
+    color: #fff;
+    font-weight: bold;
+    background-color: #2b724c;
+}
+.bg_none{
+    background-color: #fffad8;
+    border: none;
+    border-bottom: 2px solid #2b724c;
+}
+
+.kaisya {
+  border: 2px solid #2b724c;
+}
+
+.kaisya th, td {
+  border-right: 2px solid #2b724c;
+}
+.kaisya td {
+  text-align: left;
+    padding-left: 5px;
+}
+
+
+
+
+
+
+
+ul.price {
+    list-style: square; 
+}
+
+
+
+.tit_hikaku {
+    padding: 2em 4em;
+}
+
+.img_price {
+    float: left;
+    width: 48%;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 15px;
+    margin: 1em 0.5em;
+}
+.img_plan{
+    background-color: #e8f5eb;
+    padding: 4em 0 0em;
+}
+
+.img_plan img {
+    width: 70%;
+    margin: 0 auto 2em;
+    display: block;
+}
+
+.syu1 {
+    text-align: center;
+    font-size: 1.1em;
+}
+.syu1 p {
+    line-height: 2;
+}
+
+.img_ozigi {
+    width: 8%;
+    margin: 0 auto;
+    padding-top: 1em;
+}
+
+
+/*--------------------------------------------------
+flow
+-----------------------------------------------------*/
+.box_flow {
+        width:85%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 1em;
+    margin-bottom: 60px;
+        position: relative;
+        box-shadow: 5px 5px 7px  #ccc;
+
+}
+
+.box_flow:before {
+    left: 46%;
+border: 30px solid transparent;
+    border-top: 20px solid #2b724c;
+    content: "";
+    position: absolute;
+    bottom: -75px;
+}
+
+.box_flow_end {
+            width:85%;
+    margin: 5px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 1em;
+        box-shadow: 5px 5px 7px  #ccc;
+
+}
+
+
+
+.img_flow {
+    float: left;
+    width: 22%;
+    padding: 1em 0.5em;
+    padding-left: 1em;
+}
+
+.txt_flow {
+    float: right;
+    width: 78%;
+    padding: 2em 0.5em;
+}
+
+
+.step {
+  position: relative;
+  display: inline-block;
+  padding: 0.2em 0.5em 0em 1.2em;
+  color: #fff;
+  border-radius: 100vh 0 0 100vh;
+  background: #2b724c;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+.step:before {
+  position: absolute;
+  top: calc(50% - 3px);
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
+}
+
+
+/*--------------------------------------------------
+アクセス
+-----------------------------------------------------*/
+.box_map {
+    width: 58%;
+    float: right;
+    padding: 4em 0 1em;
+    
+
+}
+
+.gmap {
+height: 0;
+overflow: hidden;
+padding-bottom: 56.25%;
+position: relative;
+}
+.gmap iframe {
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+}
+
+
+.img_access {
+    float: left;
+    width: 40%;
+    padding: 4em 0;
+    
+}
+
+
+
+/*--------------------------------------------------
+よくある質問
+-----------------------------------------------------*/
+.accordion {
+    max-width: 100%;
+    padding: 2em 0em 4em;
+
+}
+
+/*------------------------------
+
+ここからアコーディオンのCSS
+
+------------------------------*/
+/* チェックボックスは非表示 */
+.accordion-hidden {
+    display: none;
+}
+
+/* Question部分 */
+.accordion-open {
+    display: block;
+    padding: 1.5em 0em 1.5em 0.5em;
+    background: #e2f2e6;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    margin: 5px 0;
+    position: relative;
+    color: #2b724c;
+    font-weight: bold;
+    /* 変更部分 */
+}
+
+/* 開閉状態を示すアイコン+の作成 */
+.accordion-open::before,
+.accordion-open::after {
+    content: '';
+    width: 20px;
+    height: 3px;
+    background: #2b724c;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+/* 一本は縦にして+を作る */
+.accordion-open::after {
+    transform: translateY(-50%) rotate(90deg);
+    transition: .5s;
+}
+
+/* アコーディオンが開いたら縦棒を横棒にして-にする */
+.accordion-hidden:checked + .accordion-open:after {
+    transform: translateY(-50%) rotate(0);
+}
+
+/* Answer部分 */
+.accordion-close {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    /* 表示速度の設定 */
+}
+
+/* チェックボックスにチェックが入ったらAnswer部分を表示する */
+.accordion-hidden:checked + .accordion-open + .accordion-close {
+    height: auto;
+    opacity: 1;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+    /*--------------------------------------------------
+下部固定ヘッダー（スマホ）
+-----------------------------------------------------*/
+     
+#sp_btn {
+        display: none;
+}
+
+
+
+/*--------------------------------------------------
+フッター部分
+-----------------------------------------------------*/
+.footer {
+  background-color: #2b724c;
+  padding: 2em 0em;
+  text-align: center;
+  font-size: 1.4em;
+    color: #fff;
+}
+.footer a {
+  color: #fff;
+}
