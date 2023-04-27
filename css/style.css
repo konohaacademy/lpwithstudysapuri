@@ -401,6 +401,7 @@ CTAエリア
     float: right;
     padding: 10px 0px 5px 10px; 
     width: 20%;
+    margin-bottom: 2em;
 }
 
 .goukaku_txt {
@@ -422,7 +423,7 @@ CTAエリア
 
 }
 .goukaku_scl {
-    font-size: 2.6em;
+    font-size: 2em;
     font-weight: bold;
   color: #d52438;
     letter-spacing: 2px;
