@@ -333,7 +333,7 @@ CTAエリア
 
 }
 .goukaku_scl {
-    font-size: 2em;
+    font-size: 1.6em;
     font-weight: bold;
   color: #d52438;
     letter-spacing: 2px;
@@ -514,12 +514,13 @@ th, td {
 
 }
 table th {
-    width: 100%;
+    padding: 1em;
 }
 table td {
   text-align: center;
   background-color: #fff;
     line-height: 1.2;
+    width: 40%;
 }
  
 .kaisya th {
