@@ -362,6 +362,121 @@ CTAエリア
 }
 
 
+
+
+
+
+
+
+
+        /* --- 進学実績・成績セクションのスマホ最適化 --- */
+        
+        /* スマホ表示（768px以下）の設定 */
+        @media screen and (max-width: 768px) {
+            
+            .container_jisseki {
+                width: 100% !important;
+                padding: 10px 0 !important; /* 上下の余白を詰めました */
+            }
+
+            .box_jisseki {
+                width: 95% !important;
+                padding: 15px 10px !important;
+                margin: 10px auto !important;
+                background-color: #ffee7d !important; /* 背景の黄色を強制適用 */
+                border-radius: 8px; /* 角を少し丸くするとバランスが良いです */
+                overflow: hidden; /* float解除の代わり */
+            }
+
+            /* --- 進学実績（画像が右） --- */
+            .img_goukaku {
+                float: right !important;
+                padding: 5px 0 5px 10px !important; 
+                width: 25% !important; /* 画像サイズを調整 */
+            }
+
+            .goukaku_txt {
+                float: left !important;
+                width: 75% !important;
+                padding-top: 5px !important;
+            }
+
+            .goukaku_com {
+                font-weight: bold !important;
+                text-align: center !important;
+                color: #42210b !important;
+                font-size: 0.85em !important; /* 文字がはみ出ないよう微調整 */
+                line-height: 1.2 !important;
+                margin-bottom: 5px !important;
+            }
+
+            .goukaku_scl {
+                font-size: 3em !important; /* スマホで縦に潰れないサイズ */
+                font-weight: bold !important;
+                color: #d52438 !important;
+                letter-spacing: 1px !important;
+                text-align: center !important;
+                line-height: 1.2 !important;
+            }
+
+            /* --- 定期テスト成績（画像が左） --- */
+            .img_test {
+                float: left !important;
+                padding: 5px 10px 5px 0 !important; 
+                width: 25% !important;
+            }
+
+            .test_txt {
+                float: right !important;
+                width: 75% !important;
+                padding-top: 5px !important;
+            }
+
+            /* 「数学89点」などの結果部分 */
+            .test_kekka {
+                font-size: 3em !important; /* 大きすぎた場合はここを調整 */
+                font-weight: bold !important;
+                text-align: center !important;
+                margin: 0 !important;
+            }
+
+            /* 数字の強調部分 */
+            .big2 {
+                font-size: 3em !important;
+                
+            }
+
+            /* 共通：テキストの行間 */
+            .goukaku_txt p, .test_txt p {
+                line-height: 1.2 !important;
+            }
+
+            /* 料金テーブル（既存） */
+            .sp_img {
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .sp_img table {
+                width: auto;
+                min-width: 700px;
+            }
+            .pc_img { display: none; }
+        }
+
+        /* PC表示（769px以上） */
+        @media screen and (min-width: 769px) {
+            .sp_img, .scroll-hint { display: none; }
+            /* PC用のスタイルは style.css のものが適用されます */
+        }
+
+
+
+
+
+
+
+
 /*--------------------------------------------------
 悩み
 -----------------------------------------------------*/
@@ -758,3 +873,142 @@ border: 30px solid transparent;
   font-size: 1.2em;
 }
 }
+
+
+
+
+
+ /* 全般的なテーブルスタイル */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: "Noto Sans JP", sans-serif;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px 8px; /* 左右のパディングを少し詰めました */
+            text-align: center;
+            line-height: 1.5;
+            /* 一律の min-width を解除し、中身に応じた最小幅にします */
+            min-width: auto; 
+        }
+
+        /* 各カラムの最小幅をコンテンツ量に合わせて個別調整 */
+        /* 小学生・中学生などは狭く、高校生は広く設定 */
+        td:nth-child(2), td:nth-child(3) {
+            min-width: 120px; 
+        }
+        td:nth-child(4), td:nth-child(5) {
+            min-width: 220px; /* 文字数の多い高校生のカラムを広めに確保 */
+        }
+
+        /* 左端の見出し列 */
+        th:first-child {
+            min-width: 80px;
+        }
+
+        .tb_green {
+            background-color: #e6f4ea;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            white-space: nowrap;
+        }
+
+        tr:last-child td {
+            font-weight: bold;
+            
+        }
+
+        /* --- レスポンシブ設定 --- */
+
+        /* PC表示の制御 */
+        @media screen and (min-width: 769px) {
+            .sp_img {
+                display: none; /* スマホ用を隠す */
+            }
+        }
+
+        /* スマホ表示の制御 */
+        @media screen and (max-width: 768px) {
+            .pc_img {
+                display: none; /* PC用を隠す */
+            }
+
+            /* テーブルを囲む div (sp_img) に対してスクロールを設定 */
+            .sp_img {
+                width: 100%;
+                overflow-x: auto; /* 横方向に内容がはみ出た場合にスクロールを出す */
+                -webkit-overflow-scrolling: touch; /* iOSでのスクロールを滑らかにする */
+                border: 1px solid #eee;
+                margin-bottom: 10px;
+            }
+
+            .sp_img table {
+                width: auto; 
+                /* min-width: 1000px; を削除し、セルの合計値で決まるように変更 */
+                margin-bottom: 0;
+            }
+            
+            .scroll-hint {
+                display: block;
+                text-align: center;
+                font-size: 11px;
+                color: #888;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* PC時はヒントを隠す */
+        @media screen and (min-width: 769px) {
+            .scroll-hint {
+                display: none;
+            }
+        }
+
+        /* スクロールバーのカスタマイズ（任意） */
+        .sp_img::-webkit-scrollbar {
+            height: 6px;
+        }
+        .sp_img::-webkit-scrollbar-thumb {
+            background: #ddd;
+            border-radius: 10px;
+        }
+
+/* 進学実績画像専用スタイル
+   HTML側で <img src="images/shingakujissekidaigaku.png" class="img_jisseki_responsive" alt="進学実績"> 
+   のようにクラスを指定してください。
+*/
+
+.img_jisseki_responsive {
+    display: block;
+    width: 100%;      /* 親要素の幅いっぱいに広げる */
+    max-width: 900px;  /* PCで広がりすぎないよう最大幅を制限（適宜調整してください） */
+    height: auto;     /* 縦横比を維持 */
+    margin: 30px auto; /* 上下に余白を作り、中央寄せにする */
+    border-radius: 5px; /* 必要に応じて角をわずかに丸くする */
+}
+
+/* スマホ表示（768px以下）での微調整 */
+@media screen and (max-width: 768px) {
+    .img_jisseki_responsive {
+        width: 95%;     /* スマホでは画面端に近すぎないよう、左右に少し隙間を作る */
+        margin: 20px auto; /* スマホ用に上下余白を少し詰める */
+    }
+}
+        
+
+
+
+
+
+
+
+
+        
