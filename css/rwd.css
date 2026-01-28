@@ -896,15 +896,16 @@ border: 30px solid transparent;
             min-width: auto; 
         }
 
-        /* 各カラムの最小幅をコンテンツ量に合わせて個別調整 */
+        /* 各カラムの最小幅をコンテンツ量に合わせて個別調整
         /* 小学生・中学生などは狭く、高校生は広く設定 */
-        td:nth-child(2), td:nth-child(3) {
+        /* td:nth-child(2), td:nth-child(3) {
             min-width: 120px; 
-        }
-        td:nth-child(4), td:nth-child(5) {
-            min-width: 220px; /* 文字数の多い高校生のカラムを広めに確保 */
-        }
-
+        } */
+        /* td:nth-child(4), td:nth-child(5) {
+            min-width: 220px; 
+        } */
+        /* 文字数の多い高校生のカラムを広めに確保 */
+        
         /* 左端の見出し列 */
         th:first-child {
             min-width: 80px;
@@ -921,10 +922,10 @@ border: 30px solid transparent;
             white-space: nowrap;
         }
 
-        tr:last-child td {
+        /* tr:last-child td {
             font-weight: bold;
             
-        }
+        } */
 
         /* --- レスポンシブ設定 --- */
 
