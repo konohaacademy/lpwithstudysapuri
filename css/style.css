@@ -697,7 +697,7 @@ table td {
 
 .table_scroll table {
     /* ★ここが重要 */
-    min-width: 700px; /* テーブルの最小幅を700pxに固定（これ以上縮ませない） */
+    min-width: 1000px; /* テーブルの最小幅を700pxに固定（これ以上縮ませない） */
     width: auto;      /* 幅の自動調整 */
 }
 
