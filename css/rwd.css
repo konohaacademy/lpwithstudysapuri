@@ -635,7 +635,7 @@ table td {
   text-align: center;
   background-color: #fff;
     line-height: 1.2;
-    width: 40%;
+    /* width: 40%; */
 }
  
 .kaisya th {
