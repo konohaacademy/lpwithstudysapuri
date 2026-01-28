@@ -688,6 +688,25 @@ table td {
     padding-left: 5px;
 }
 
+/* テーブル横スクロール用の設定 */
+.table_scroll {
+    overflow-x: auto;  /* 横にはみ出た部分をスクロールさせる */
+    -webkit-overflow-scrolling: touch; /* iPhoneなどでスクロールを滑らかにする */
+    width: 100%;
+}
+
+.table_scroll table {
+    /* ★ここが重要 */
+    min-width: 700px; /* テーブルの最小幅を700pxに固定（これ以上縮ませない） */
+    width: auto;      /* 幅の自動調整 */
+}
+
+/* 見出し（項目名）が改行されないようにする設定（お好みで） */
+.table_scroll th {
+    white-space: nowrap; /* テキストの折り返しを禁止 */
+    min-width: 100px;    /* 見出しの最低幅を確保 */
+}
+
 
 
 
